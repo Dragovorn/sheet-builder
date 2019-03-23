@@ -1,8 +1,22 @@
-footer {
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#footer-bar {
     position: absolute;
     width: 100vw;
-    height: 10vmin;
-    top: 90vmin;
+    height: 10vh;
+    top: 90vh;
     left: 0px;
-    color: aliceblue;
+    background: lightcoral;
+}
+
+#footer-text {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5em;
 }
