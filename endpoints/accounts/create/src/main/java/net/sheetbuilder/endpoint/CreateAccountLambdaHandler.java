@@ -35,6 +35,7 @@ public class CreateAccountLambdaHandler extends AbstractApiRequest {
         User user = builder.build();
 
         putResult("userId", user.getUserId());
+        putResult("passwordHash", user.getPasswordHash());
         putResult("email", user.getEmail());
         putResult("firstName", user.getFirstName());
         putResult("lastName", user.getLastName());

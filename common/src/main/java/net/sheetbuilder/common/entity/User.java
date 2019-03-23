@@ -48,7 +48,15 @@ public class User {
     }
 
     public String getFullName() {
-        return this.firstName + " " + this.lastName;
+        if (hasFirstName() && hasLastName()) {
+            return this.firstName + " " + this.lastName;
+        } else if (!hasFirstName()) {
+            return this.lastName;
+        } else if (!hasLastName()) {
+            return this.firstName;
+        } else {
+            return "";
+        }
     }
 
     public String getEmail() {
@@ -69,6 +77,14 @@ public class User {
 
     public UUID getUserId() {
         return this.userId;
+    }
+
+    public boolean hasFirstName() {
+        return !this.firstName.equals("");
+    }
+
+    public boolean hasLastName() {
+        return !this.lastName.equals("");
     }
 
     public static class Builder {
