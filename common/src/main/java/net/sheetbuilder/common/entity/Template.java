@@ -1,4 +1,4 @@
-package net.sheetbuilder.common;
+package net.sheetbuilder.common.entity;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.JsonObject;
