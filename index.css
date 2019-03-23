@@ -4,19 +4,11 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
-
-#footer-bar {
-    position: absolute;
+.navbar {
+    position: sticky;
     width: 100vw;
+    left: 0vw;
     height: 10vh;
-    top: 90vh;
-    left: 0px;
-    background: lightcoral;
+    top: 0vh;
 }
 
-#footer-text {
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 1.5em;
-}
