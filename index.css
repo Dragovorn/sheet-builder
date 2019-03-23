@@ -4,11 +4,48 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
-.navbar {
-    position: sticky;
+#navbar {
+    position: absolute;
     width: 100vw;
     left: 0vw;
     height: 10vh;
     top: 0vh;
+    background-color: grey;
 }
+#navbar h1 {
+    font-size: 300%;
+    margin: 2vh;
+    vertical-align: middle;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    position: absolute;
+    top: 10vh;
+    left: 0vw;
+    height: 85vh;
+    width: 100vw;
+    background-color: lightcyan;
+}
+
+#footer-bar {
+    position: absolute;
+    width: 100vw;
+    height: 5vh;
+    top: 95vh;
+    left: 0vw;
+    background-color: grey;
+}
+
+.block {
+    border-radius: 10%;
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+    background: darkgrey;
+    box-shadow: 5px 5px #2e2e2e;
+}
+
 
