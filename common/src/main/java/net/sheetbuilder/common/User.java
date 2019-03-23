@@ -17,6 +17,10 @@ public class User {
 
     private UUID userId;
 
+    public static Builder newBuilder() {
+        return new Builder();
+    }
+
     private User(Builder builder) {
         Preconditions.checkNotNull(builder.firstName);
         Preconditions.checkNotNull(builder.lastName);
