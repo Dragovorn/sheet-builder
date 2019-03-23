@@ -1,0 +1,8 @@
+footer {
+    position: absolute;
+    width: 100vw;
+    height: 10vmin;
+    top: 90vmin;
+    left: 0px;
+    color: aliceblue;
+}
