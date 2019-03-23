@@ -44,8 +44,15 @@ main {
     height: 200px;
     width: 200px;
     margin: 5px;
-    background: darkgrey;
+    background-color: darkgrey;
     box-shadow: 5px 5px #2e2e2e;
+    transition: all 0.2s ease-in;
+}
+
+.block:hover {
+    margin-top: 3vh;
+    background-color: darkcyan;
+    transform: scale(1.1); 
 }
 
 
