@@ -1,4 +1,4 @@
-package net.sheetbuilder.helloworld;
+package net.sheetbuilder.endpoint.helloworld;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
