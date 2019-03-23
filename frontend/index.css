@@ -23,7 +23,7 @@ main {
     display: grid;
     grid-template-columns: repeat(10, 10%);
     grid-template-rows: repeat(10, 10%);
-    grid-auto-flow: row;
+    grid-auto-flow: row column;
     position: absolute;
     top: 10vh;
     left: 0vw;
@@ -54,4 +54,14 @@ main {
     transform: scale(1.1); 
 }
 
+.class {
+    padding: 5%;
+    align-self: center;
+    justify-self: center;
+    grid-column: span 2;
+    grid-row: span 1;
+    font-size: 300%;
+    font-weight: bold;
+    color: green;
+}
 

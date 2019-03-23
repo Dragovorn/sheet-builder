@@ -1,0 +1,11 @@
+{
+    name: "Bob",
+    health: 5,
+    details: {
+        backstory: "bob is cool",
+        alignment: "Lawful Good"
+    },
+    class: "Dad",
+    race: "Human"
+    
+};

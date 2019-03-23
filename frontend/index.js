@@ -4,28 +4,40 @@
     window.addEventListener("load", initialize);
 
     let NUMBOXES = 10;
+    let BOB = {
+        "name": "Bob",
+        "health": 5,
+        "details": {
+            "backstory": "bob is cool",
+            "alignment": "Lawful Good"
+        },
+        "class": "Dad",
+        "race": "Human"
+        
+    };
 
     function initialize() {
-
         genBoxes();
     }
 
 
     function genBoxes() {
         let box = document.getElementById("box");
-        for (let i = 1; i <= NUMBOXES; i++) {
-            //let width = prompt("width "+i+":");
-            //let height = prompt("height "+i+":");
+        
+
+        console.log(BOB["details"]);
+        for (let key in BOB) {
             let x = document.createElement("div");
-            x.style = "grid-column: span "+ parseInt(randNum(1,4))+"; grid-row: span "+ parseInt(randNum(1,4))+";";
             x.classList.add("block");
+            let y = document.createElement("p");
+            y.classList.add(key)
             box.appendChild(x);
-            
         }
     }
 
     function randNum(a,b) {
         return Math.random()*(b-a) + a;
     }
+
 
 })();
