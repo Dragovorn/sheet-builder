@@ -1,4 +1,4 @@
-package net.sheetbuilder.endpoint.helloworld;
+package net.sheetbuilder.endpoint;
 
 import net.sheetbuilder.common.entity.AbstractApiRequest;
 
