@@ -18,5 +18,5 @@
     grid-column: 4;
     grid-row: 2;
     display: grid;
-    grid-template-rows: 25% auto;
+    grid-template-rows: 25% repeat(10, 7.5%);
 }

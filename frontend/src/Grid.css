@@ -6,3 +6,11 @@
     grid-template-columns: repeat(10,10%);
     grid-template-rows: repeat(10,10%);
 }
+
+.Card {
+    background: #dbd7c4;
+    border: 0.3vmin solid black;
+    border-radius: 10% 10% 10% 10% / 20% 20% 20% 20%;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.1), 0 17px 50px 0 rgba(0,0,0,0.1);
+    margin: 2%;
+}

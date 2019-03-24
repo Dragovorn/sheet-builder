@@ -35,7 +35,8 @@ class NavBar extends Component {
   }
   
   goToHome() {
-    return 5;
+    const home = <Home></Home>;
+    ReactDOM.render(home, document.getElementById('Page'));
   }
   
   goToLogin() {

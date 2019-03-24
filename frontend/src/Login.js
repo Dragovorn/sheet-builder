@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Login.css';
 
-let URL = "https://api.sheetbuilder.net/"
+let URL = "https://api.sheetbuilder.net/";
 
 export default class Login extends Component {
   render() {
@@ -73,7 +73,7 @@ class SignUp extends Component {
 
         <label>Password: </label>
         <input name="password" id="password"/>
-
+        <div></div>
         {/* <input type="submit" value="Submit" /> */} 
         <button onClick={this.postSend}>Submit!</button>
         </div>
@@ -83,11 +83,18 @@ class SignUp extends Component {
   }
 
   postSend() {
-    let params =  new FormData();
-    params.append("firstName", document.getElementById("firstName").value);
-    params.append("lastName", document.getElementById("lastName").value);
-    params.append("email", document.getElementById("email").value);
-    params.append("password", document.getElementById("password").value);
+    // let params =  new FormData();
+    // params.append("firstName", document.getElementById("firstName").value);
+    // params.append("lastName", document.getElementById("lastName").value);
+    // params.append("email", document.getElementById("email").value);
+    // params.append("password", document.getElementById("password").value);
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+
+
     let url = URL + "accounts/create";
     /* fetch(url, {method: "POST", body: params})
       .then(checkStatus)
@@ -106,6 +113,17 @@ class SignUp extends Component {
               // Request finished. Do processing here.
           }
       }
+
+      let params = "email=" + email + "&password=" + password;
+
+      if (firstName != null) {
+        params += "&firstName=" + firstName;
+      }
+
+      if (lastName != null) {
+        params += "&lastName=" + lastName;
+      }
+
       xhr.send(params);
   }
 
