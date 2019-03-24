@@ -12,6 +12,8 @@ public abstract class AbstractApiRequest implements RequestHandler<Map<String, S
 
     @Override
     public final Map<String, Object> handleRequest(Map<String, String> data, Context context) {
+        result.clear();
+
         handle(data);
 
         return result;

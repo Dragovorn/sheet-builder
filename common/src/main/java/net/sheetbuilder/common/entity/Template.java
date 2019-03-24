@@ -19,6 +19,12 @@ public class Template {
 
     private JsonObject templateData;
 
+    private int upvotes;
+    private int downvotes;
+
+    private boolean global;
+    private boolean curated;
+
     public static Builder newBuilder() {
         return new Builder();
     }
@@ -31,6 +37,8 @@ public class Template {
         Preconditions.checkNotNull(builder.created);
         Preconditions.checkNotNull(builder.lastUpdated);
         Preconditions.checkNotNull(builder.templateData);
+        Preconditions.checkState(builder.upvotes >= 0);
+        Preconditions.checkState(builder.downvotes >= 0);
 
         this.templateId = builder.templateId;
         this.creatorId = builder.creatorId;
@@ -39,6 +47,10 @@ public class Template {
         this.created = builder.created;
         this.lastUpdated = builder.lastUpdated;
         this.templateData = builder.templateData;
+        this.upvotes = builder.upvotes;
+        this.downvotes = builder.downvotes;
+        this.global = builder.global;
+        this.curated = builder.curated;
     }
 
     public UUID getTemplateId() {
@@ -69,6 +81,26 @@ public class Template {
         return this.templateData;
     }
 
+    public int getUpvotes() {
+        return this.upvotes;
+    }
+
+    public int getDownvotes() {
+        return this.downvotes;
+    }
+
+    public int getTotalVotes() {
+        return this.upvotes - this.downvotes;
+    }
+
+    public boolean isGlobal() {
+        return this.global;
+    }
+
+    public boolean isCurated() {
+        return this.curated;
+    }
+
     public static class Builder {
 
         private UUID templateId;
@@ -81,6 +113,12 @@ public class Template {
         private Date lastUpdated;
 
         private JsonObject templateData;
+
+        private int upvotes;
+        private int downvotes;
+
+        private boolean global;
+        private boolean curated;
 
         private Builder() { }
 
@@ -122,6 +160,30 @@ public class Template {
 
         public Builder withTemplateData(JsonObject templateData) {
             this.templateData = templateData;
+
+            return this;
+        }
+
+        public Builder withUpvotes(int upvotes) {
+            this.upvotes = upvotes;
+
+            return this;
+        }
+
+        public Builder withDownvotes(int downvotes) {
+            this.downvotes = downvotes;
+
+            return this;
+        }
+
+        public Builder isGlobal() {
+            this.global = true;
+
+            return this;
+        }
+
+        public Builder isCurated() {
+            this.curated = true;
 
             return this;
         }
